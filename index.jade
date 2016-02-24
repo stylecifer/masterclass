@@ -14,7 +14,7 @@ html(lang="es")
 			
 
 		header
-			div.darkblue
+			div.darkblue__header
 				div.header
 					img(class="brand", src="img/masterclass__brand.svg")
 					h1 Master Class
@@ -24,6 +24,7 @@ html(lang="es")
 						a.cta(href='#') CUENTALE A TU JEFE
 					a.login(href='#') Inicia sesion
 		section.beneficios
+			
 			article.plan__curricular
 				figure
 					img(src="img/planificaciones.png", alt="Plan curricular")
@@ -32,12 +33,13 @@ html(lang="es")
 				p Con la posibilidad de modificarlo de acuerdo a las nesecidades de cada curso
 				p
 					img(src="garantia.png")
+			
 			article.evaluaciones
 				figure
-					img(src="evaluaciones.png", alt="Evaluaciones")
+					img.left(src="img/evaluaciones.png", alt="Evaluaciones")
 				h2 Las tediosas evaluaciones ahora son instantáneas
 				p Facilidad en las más de 600 asignación de evaluaciones.
-					ul.evaluaciones
+					ul.tipos__eval
 						li SiMCE
 						li Prueba de unidad
 						li Control y ensayos PSU
@@ -45,38 +47,41 @@ html(lang="es")
 				p Reporte PME
 			article.plan__lector
 				figure
-					img(src="plan__lector.png", alt="Plan lector")
+					img(src="img/plan__lector.png", alt="Plan lector")
 
 				h2 Deja de preocuparte por pedir a los apoderados que compren los libros
 				p Incorporamos todo el plan lector en formato digital
 				p Más 120 guias de apoyo para los padres
 				p Y 120 fichas literarias
 				p 10 libros por nivel  de primero a octavo básico
-
 		section.clientes
 			h2 Es utilizado por más de 200 instituciones en todo Chile
-			img(src="insignia.png", alt="colegios")
-			p No pierdas tiempo y
+			img(src="img/colegios.png", alt="colegios")
+			p No pierdas tiempo y 
+			a.cta(href="#")
 				bottom Se parte de ellos
-
 		section.soporte
-			h2 Jamás dejaremos de brindar apoyo a un colega
-			p Para eso contamos con un equipo técnico e informático que dan asistencia telefónica inmediata a todas tus dudas con el uso del programa.
-			a(href="#") ayuda@masterclass.cl
-			a(href="#") +562 2599 4993
-
-		section.contacto // background imege con css
-			h2 Nos gustaria conoserte
-			p Y que conozcas al equipo humano que esta detrás de este programa
-			p Te damos asesoría completa y una visita guiada para que pruebes el software y sientas los beneficios que traerá a la comunidad estudiantil.
-			p También podemos ofrecerte facilidades de pago dependiendo de tus nescesidades.
-			h2 Conoce más de nosotros
-			ul 
-				li Facebook
-				li Twitter
-				li eMail
-				li +562 2599 4993
-
-
+			div.darkblue__soporte
+				h2 Jamás dejaremos de brindar apoyo a un colega
+				p Para eso contamos con un equipo técnico e informático que dan asistencia telefónica inmediata a todas tus dudas con el uso del programa.
+				p
+					a(href="#") ayuda@masterclass.cl
+				p
+					a(href="#") +562 2599 4993
+		section.contacto
+			.light__screen
+				.float__center
+					article				
+						h2 Nos gustaria conoserte
+						p Y que conozcas al equipo humano que esta detrás de este programa
+						p Te damos asesoría completa y una visita guiada para que pruebes el software y sientas los beneficios que traerá a la comunidad estudiantil.
+						p También podemos ofrecerte facilidades de pago dependiendo de tus nescesidades.
+					article
+						h2 Conoce más de nosotros
+						ul 
+							li Facebook
+							li Twitter
+							li eMail
+							li +562 2599 4993
 		footer
-			p Beaucheff 1151, Santiago, Región Metropolitana, Chile.  Teléfono:+56 2 2599 4993. Horario de atención: 8:30–18:30hrs. contacto@kdoce.cl
+			p Beaucheff 1151, Santiago, Región Metropolitana, Chile.  Teléfono:+56 2 2599 4993. Horario de atención: 8:30–18:30hrs. contacto@masterclass.cl

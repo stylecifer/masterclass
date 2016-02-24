@@ -1,1 +1,171 @@
-body{font-family:'Roboto',arial,sans-serif}nav{text-align:right;color:#fff;position:absolute;width:100vw;}nav li{display:inline-block;margin-right:1em}header{background:url("img/masterclass__cover.jpg") 63% bottom;height:100vh;}header h1{display:none}header h2{font-size:4em;font-weight:100}header img{max-width:24%}.description{font-size:1.7em;font-weight:300}.header{max-width:880px}.darkblue{text-align:center;color:#fff;display:flex;align-items:center;justify-content:center;background-color:rgba(0,3,60,0.59);width:100%;height:100%}.cta{background:linear-gradient(to bottom,#ff5300 0%,#ff8300 100%);color:#fff;padding:12px 30px;border-radius:7px;text-decoration:none}.login{color:#00abfc}.beneficios figure{oveflow:hidden;width:30vw;}.beneficios figure img{max-width:600px}.plan__curricular{background:#004491;height:100vh;padding:3% 0 0 10%;color:#fff;}.plan__curricular figure{float:right}.plan__curricular h2{font-weight:100;width:70vw}.plan__curricular p{width:70vw}
+body {
+  font-family: 'Roboto', arial, sans-serif;
+}
+.beneficios article {
+  padding-top: 10%;
+  height: 80vh;
+}
+.beneficios figure {
+  overflow: hidden;
+  width: 50vw;
+  margin: 0;
+}
+.beneficios figure img {
+  max-height: 70vh;
+}
+.beneficios .evaluaciones {
+  color: #004491;
+  background-color: #fff;
+}
+.beneficios .evaluaciones h2,
+.beneficios .evaluaciones p,
+.beneficios .evaluaciones ul.tipos__eval {
+  width: 30vw;
+  display: inline-block;
+}
+.beneficios .evaluaciones ul.tipos__eval {
+  margin-left: 10px;
+  list-style-type: none;
+}
+.beneficios .evaluaciones figure {
+  float: left;
+  width: 40vw;
+  margin-right: 10%;
+}
+.beneficios .evaluaciones figure img.left {
+  position: relative;
+  left: -40%;
+}
+.beneficios .plan__lector,
+.beneficios .plan__curricular {
+  padding-left: 8%;
+  background: #004491;
+  color: #fff;
+}
+.beneficios .plan__lector figure,
+.beneficios .plan__curricular figure {
+  float: right;
+}
+.beneficios .plan__lector h2,
+.beneficios .plan__curricular h2 {
+  width: 30vw;
+}
+.beneficios .plan__lector p,
+.beneficios .plan__curricular p {
+  width: 30vw;
+}
+.clientes {
+  text-align: center;
+  margin-top: 8%;
+  height: 90vh;
+}
+.clientes p {
+  white-space: pre;
+}
+.cta {
+  background: linear-gradient(to bottom, #ff5300 0%, #ff8300 100%);
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 7px;
+  text-decoration: none;
+}
+.darkblue__soporte {
+  padding-top: 8%;
+  background-color: rgba(0,3,60,0.59);
+  width: 100%;
+  height: 80vh;
+}
+.darkblue__header {
+  text-align: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,3,60,0.59);
+  width: 100%;
+  height: 100%;
+}
+.description {
+  font-size: 1.7em;
+  font-weight: 300;
+}
+h2 {
+  font-weight: 100;
+}
+header {
+  background: url("img/masterclass__cover.jpg") 63% bottom;
+  height: 100vh;
+}
+header h1 {
+  display: none;
+}
+header h2 {
+  font-size: 4em;
+}
+header img {
+  max-width: 24%;
+}
+.header {
+  max-width: 880px;
+}
+.login {
+  color: #00abfc;
+}
+nav {
+  text-align: right;
+  color: #fff;
+  position: absolute;
+  width: 100vw;
+}
+nav li {
+  display: inline-block;
+  margin-right: 1em;
+}
+.soporte {
+  background: url("img/soporte__masterclass.jpg") center center;
+  background-size: cover;
+  height: 80vh;
+  text-align: center;
+  color: #fff;
+}
+.soporte a {
+  white-space: pre;
+  color: #ff684a;
+}
+.contacto {
+  background: url("img/team-jumping.jpg") center center no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 80vw;
+  margin: 0;
+  color: #004491;
+}
+.contacto .light__screen {
+  padding-top: 8%;
+  background-color: rgba(255,254,247,0.7);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.contacto .light__screen .float__center {
+  width: 60%;
+}
+.contacto .light__screen .float__center p {
+  text-align: left;
+}
+.contacto .light__screen .float__center ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+footer {
+  background-color: #004491;
+  height: 100px;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  text-items: center;
+}
