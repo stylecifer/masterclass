@@ -1,0 +1,82 @@
+doctype html
+html(lang="es")
+	include head.jade
+	
+	body.home
+		nav.mine 
+			ul 
+				li Beneficios
+				li Experiencia
+				li Soporte 
+				li Contacto 
+				li.login Iniciar sesion
+				li.comprar Implementalo
+			
+
+		header
+			div.darkblue
+				div.header
+					img(class="brand", src="img/masterclass__brand.svg")
+					h1 Master Class
+					h2 Una gran ayuda para los profes
+					p.description Te invitamos a conocer esta aplicación web hecha por profesores y para profesores
+					p.bottom
+						a.cta(href='#') CUENTALE A TU JEFE
+					a.login(href='#') Inicia sesion
+		section.beneficios
+			article.plan__curricular
+				figure
+					img(src="img/planificaciones.png", alt="Plan curricular")
+				h2 Año a año incorporamos todo el plan curricular propuesto por el MINEDUC
+				p +32.000 horas planificadas desde pre-kinder a cuarto medio
+				p Con la posibilidad de modificarlo de acuerdo a las nesecidades de cada curso
+				p
+					img(src="garantia.png")
+			article.evaluaciones
+				figure
+					img(src="evaluaciones.png", alt="Evaluaciones")
+				h2 Las tediosas evaluaciones ahora son instantáneas
+				p Facilidad en las más de 600 asignación de evaluaciones.
+					ul.evaluaciones
+						li SiMCE
+						li Prueba de unidad
+						li Control y ensayos PSU
+				p Reportes en tiempo real con gráficos estadísticos y segmentación por ejes
+				p Reporte PME
+			article.plan__lector
+				figure
+					img(src="plan__lector.png", alt="Plan lector")
+
+				h2 Deja de preocuparte por pedir a los apoderados que compren los libros
+				p Incorporamos todo el plan lector en formato digital
+				p Más 120 guias de apoyo para los padres
+				p Y 120 fichas literarias
+				p 10 libros por nivel  de primero a octavo básico
+
+		section.clientes
+			h2 Es utilizado por más de 200 instituciones en todo Chile
+			img(src="insignia.png", alt="colegios")
+			p No pierdas tiempo y
+				bottom Se parte de ellos
+
+		section.soporte
+			h2 Jamás dejaremos de brindar apoyo a un colega
+			p Para eso contamos con un equipo técnico e informático que dan asistencia telefónica inmediata a todas tus dudas con el uso del programa.
+			a(href="#") ayuda@masterclass.cl
+			a(href="#") +562 2599 4993
+
+		section.contacto // background imege con css
+			h2 Nos gustaria conoserte
+			p Y que conozcas al equipo humano que esta detrás de este programa
+			p Te damos asesoría completa y una visita guiada para que pruebes el software y sientas los beneficios que traerá a la comunidad estudiantil.
+			p También podemos ofrecerte facilidades de pago dependiendo de tus nescesidades.
+			h2 Conoce más de nosotros
+			ul 
+				li Facebook
+				li Twitter
+				li eMail
+				li +562 2599 4993
+
+
+		footer
+			p Beaucheff 1151, Santiago, Región Metropolitana, Chile.  Teléfono:+56 2 2599 4993. Horario de atención: 8:30–18:30hrs. contacto@kdoce.cl
