@@ -120,5 +120,14 @@
     <footer>
       <p>Beaucheff 1151, Santiago, Región Metropolitana, Chile.  Teléfono:+56 2 2599 4993. Horario de atención: 8:30–18:30hrs. contacto@masterclass.cl</p>
     </footer>
+    <script type="text/javascript">
+      <function>validateEmail(email) {
+        <var>reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;</var>
+        <return>reg.test(email);}$(document).ready(function(){$(".modalbox").fancybox();$("#contact").submit(function() { return false; });$("#send").on("click", function(){</return>
+      </function>
+      <var>emailval  = $("#email").val();</var>
+      <var>msgval    = $("#msg").val();ar msglen    = msgval.length;</var>
+      <var>mailvalid = validateEmail(emailval);if(mailvalid == false) {$("#email").addClass("error");}else if(mailvalid == true){$("#email").removeClass("error");}if(msglen < 4) {$("#msg").addClass("error");}else if(msglen >= 4){$("#msg").removeClass("error");}if(mailvalid == true && msglen >= 4) {$("#send").replaceWith("<em>sending...</em>");$.ajax({type: 'POST',url: 'sendmessage.php',data: $("#contact").serialize(),success: function(data) {if(data == "true") {$("#contact").fadeOut("fast", function(){$(this).before("<p><strong>Success! Your feedback has been sent, thanks :)</strong></p>");setTimeout("$.fancybox.close()", 1000);});}}});}});});</var>
+    </script>
   </body>
 </html>
