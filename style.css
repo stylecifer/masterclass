@@ -172,7 +172,8 @@ footer {
 }
 #inline {
   display: none;
-  background: #fefbdf;
+  width: 70%;
+  background: #c1c1c1;
   padding: 10px;
 }
 label {
