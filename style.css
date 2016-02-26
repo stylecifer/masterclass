@@ -37,7 +37,7 @@ body {
   max-height: 70vh;
 }
 .beneficios h2 {
-  max-width: 30vw;
+  max-width: 35vw;
 }
 .beneficios .plan__lector,
 .beneficios .plan__curricular {
@@ -52,12 +52,15 @@ h2
 }
 .beneficios .plan__lector p,
 .beneficios .plan__curricular p {
-  max-width: 30vw;
+  max-width: 35vw;
 }
 .clientes {
   text-align: center;
   margin-top: 8%;
   height: 90vh;
+}
+.clientes img {
+  max-width: 90%;
 }
 .clientes p {
   white-space: pre;
@@ -68,6 +71,9 @@ h2
   padding: 12px 30px;
   border-radius: 7px;
   text-decoration: none;
+}
+.cta:hover {
+  background: #296eb5;
 }
 .darkblue__soporte {
   padding-top: 8%;
@@ -92,6 +98,7 @@ h2
 }
 h2 {
   font-weight: 100;
+  font-size: 2.4em;
 }
 header {
   background: url("img/masterclass__cover.jpg") 63% bottom;
@@ -170,10 +177,12 @@ footer {
   text-items: center;
   color: #fff;
 }
+p {
+  font-size: 1.25em;
+}
 #inline {
   display: none;
-  width: 70%;
-  background: #c1c1c1;
+  background: #f3f3df;
   padding: 10px;
 }
 label {
@@ -234,18 +243,22 @@ textarea.error:focus {
 .jefe__bottom {
   width: 99%;
 }
+.brand__blue {
+  width: 15%;
+  margin: 0 20px;
+}
 #send:hover {
-  background: #183d80;
+  background: #296eb5;
 }
 #send:active {
   color: #8c9dc0;
 }
 .profe__form {
-  font-size: 1em;
+  font-size: 1.22em;
   text-align: center;
 }
 .jefe__form {
-  font-size: 1.3em;
+  font-size: 1.5em;
   text-align: center;
 }
 .jefe__form span {
@@ -255,6 +268,21 @@ textarea.error:focus {
 .flex__form__jefe {
   display: flex;
   justify-content: space-around;
+}
+@media screen and (max-width: 980px) {
+  .beneficios figure {
+    margin: 0;
+    overflow: hidden;
+  }
+  .beneficios .evaluaciones figure {
+    width: 60vw;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .beneficios .evaluaciones .left {
+    position: relative;
+    right: 192px;
+  }
 }
 @media screen and (max-width: 768px) {
   .beneficios figure {
