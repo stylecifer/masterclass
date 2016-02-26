@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="fancybox/jquery.fancybox.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="fancybox/jquery.fancybox.js?v=2.0.6"></script>
+    <script type="text/javascript" src="app.js"></script>
   </head>
   <body class="home">
     <nav class="mine"> 
@@ -27,7 +28,7 @@
           <h1>Master Class</h1>
           <h2>Una gran ayuda para los profes</h2>
           <p class="description">Te invitamos a conocer esta aplicación web hecha por profesores y para profesores</p>
-          <p class="bottom"><a href="#" class="cta, modalbox">CUENTALE A TU JEFE</a></p><a href="#" class="login">Inicia sesion</a>
+          <p class="bottom"><a href="#" class="modalbox">CUENTALE A TU JEFE</a></p><a href="#" class="login">Inicia sesion</a>
           <div id="inline">
             <h2 class="profe__form">Dame tu correo y te envío un do para que lo imprimas y lo presentes formalmente al sostenedor.</h2>
             <form id="contact" name="contact" action="#" method="post">  </form>
@@ -121,13 +122,55 @@
       <p>Beaucheff 1151, Santiago, Región Metropolitana, Chile.  Teléfono:+56 2 2599 4993. Horario de atención: 8:30–18:30hrs. contacto@masterclass.cl</p>
     </footer>
     <script type="text/javascript">
-      <function>validateEmail(email) {
-        <var>reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;</var>
-        <return>reg.test(email);}$(document).ready(function(){$(".modalbox").fancybox();$("#contact").submit(function() { return false; });$("#send").on("click", function(){</return>
-      </function>
-      <var>emailval  = $("#email").val();</var>
-      <var>msgval    = $("#msg").val();ar msglen    = msgval.length;</var>
-      <var>mailvalid = validateEmail(emailval);if(mailvalid == false) {$("#email").addClass("error");}else if(mailvalid == true){$("#email").removeClass("error");}if(msglen < 4) {$("#msg").addClass("error");}else if(msglen >= 4){$("#msg").removeClass("error");}if(mailvalid == true && msglen >= 4) {$("#send").replaceWith("<em>sending...</em>");$.ajax({type: 'POST',url: 'sendmessage.php',data: $("#contact").serialize(),success: function(data) {if(data == "true") {$("#contact").fadeOut("fast", function(){$(this).before("<p><strong>Success! Your feedback has been sent, thanks :)</strong></p>");setTimeout("$.fancybox.close()", 1000);});}}});}});});</var>
-    </script>
+  function validateEmail(email) { 
+    var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return reg.test(email);
+  }
+  $(document).ready(function() {
+    $(".modalbox").fancybox();
+    $("#contact").submit(function() { return false; });
+    
+    $("#send").on("click", function(){
+      var emailval  = $("#email").val();
+      var msgval    = $("#msg").val();
+      var msglen    = msgval.length;
+      var mailvalid = validateEmail(emailval);
+      
+      if(mailvalid == false) {
+        $("#email").addClass("error");
+      }
+      else if(mailvalid == true){
+        $("#email").removeClass("error");
+      }
+      
+      if(msglen < 4) {
+        $("#msg").addClass("error");
+      }
+      else if(msglen >= 4){
+        $("#msg").removeClass("error");
+      }
+      
+      if(mailvalid == true && msglen >= 4) {
+        // if both validate we attempt to send the e-mail
+        // first we hide the submit btn so the user doesnt click twice
+        $("#send").replaceWith("<em>sending...</em>");
+        
+        $.ajax({
+          type: 'POST',
+          url: 'sendmessage.php',
+          data: $("#contact").serialize(),
+          success: function(data) {
+            if(data == "true") {
+              $("#contact").fadeOut("fast", function(){
+                $(this).before("<p><strong>Success! Your feedback has been sent, thanks :)</strong></p>");
+                setTimeout("$.fancybox.close()", 1000);
+              });
+            }
+          }
+        });
+      }
+    });
+  });
+</script>
   </body>
 </html>
