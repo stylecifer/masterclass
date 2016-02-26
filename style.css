@@ -196,16 +196,24 @@ th {
   -moz-osx-font-smoothing: grayscale;
 }
 .icon-envelope:before {
-  content: "\e903";
+  content: "  \e903";
+  
 }
 .icon-phone:before {
-  content: "\e900";
+  content: "  \e900";
 }
 .icon-facebook2:before {
-  content: "\e901";
+  content: "  \e901";
 }
 .icon-twitter:before {
-  content: "\e902";
+  content: "  \e902";
+}
+.icon-envelope 
+.icon-phone .icon-envelope 
+.icon-facebook2
+.icon-twitter{
+  list-style-type: none;
+  
 }
 body {
   font-family: 'Roboto', arial, sans-serif;
